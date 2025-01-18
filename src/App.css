@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'title';
+  src: url('../public/fonts/ALOT.ttf') format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'paragraph';
+  src: url('../public/fonts/MONOFONT.TTF') format('truetype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@font-face {
+  font-family: 'texta';
+  src: url('../public/fonts/RVXG0.ttf') format('truetype');
+}
+
+@keyframes pulse {
+  0%
+  {
+    transform: scale( .97);
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .97 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .97 );
+  }
+  100%
+  {
+    transform: scale( .97 );
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body { 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  border: 0;
+  background-color: rgb(41, 39, 41);
+ }
+
+#menu-logo {
+  margin-left: 3%;
+  width: 5%;
+  border-radius: 90%;
+  box-shadow: 0 0 50px #b571f4;
+  animation: pulse 3s linear infinite;
+}
+#menu-logo:hover{
+  scale: 0.7;
+  transition: 2s;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#topMenu {
+  position: sticky;
+  background-color: rgb(41, 39, 41);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#navBar {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.navItem {
+  font-family: 'texta';
+  font-size: 300%;
+  text-decoration: none;
+  color: rgb(205, 162, 245);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navItem:hover {
+  transform: scale(75%);
+  color: rgb(149, 86, 208);
+  transition: 0.5s;
 }
+
+.backgroundfilter {
+  padding: 0;
+  background-color: rgb(123, 120, 126)
+}
+
+#demShoulders {
+  opacity: 0.7;
+  width: 100vw;
+}
+
